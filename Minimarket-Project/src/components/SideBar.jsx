@@ -1,4 +1,4 @@
-import { FaHome, FaUsers, FaShoppingCart, } from "react-icons/fa";
+import { FaHome, FaUsers } from "react-icons/fa";
 import { LiaUserCheckSolid } from "react-icons/lia";
 import { IoStorefront } from "react-icons/io5";
 import { RiBook3Fill } from "react-icons/ri";
@@ -10,10 +10,9 @@ const SideBar = () => {
   const [activeMenu, setActiveMenu] = useState("Dashboard");
 
   return (
-    <div className="w-64 h-screen bg-gray-50 shadow-md">
+    <div className="w-64 min-w-64 h-screen bg-gray-50 shadow-md">
       {/* Logo dan Judul */}
       <div className="flex items-center mt-8 px-6">
-        {/* Logo SPM */}
         <img
           src={logo}
           alt="SPM Logo"
@@ -142,7 +141,11 @@ const SideBar = () => {
                 activeMenu === "Log Out" ? "bg-red-500" : "bg-white"
               }`}
             >
-              <RiBook3Fill className="w-5 h-5 text-red-500" />
+              <RiBook3Fill
+                className={`w-5 h-5 ${
+                  activeMenu === "Log Out" ? "text-white" : "text-red-500"
+                }`}
+              />
             </div>
             <span className="ml-4 font-medium text-sm text-red-500">
               Log Out
