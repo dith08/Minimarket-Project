@@ -17,7 +17,7 @@ const SideBar = () => {
         <img
           src={logo}
           alt="SPM Logo"
-          className="w-12 h-10 object-contain"
+          className="w-14 h-10 object-contain"
         />
         <h2 className="ml-3 text-sm font-bold text-gray-700">
           Surya Pratama Mart
@@ -31,7 +31,7 @@ const SideBar = () => {
         <NavLink to="/dashboard">
           <div
             onClick={() => setActiveMenu("Dashboard")}
-            className={`flex items-center px-6 py-3 mx-4 mb-3 rounded-lg cursor-pointer ${
+            className={`flex items-center px-6 py-3 mx-4 mb-3 rounded-2xl cursor-pointer ${
               activeMenu === "Dashboard"
                 ? "bg-white shadow-md text-gray-700"
                 : "text-gray-500"
@@ -56,14 +56,14 @@ const SideBar = () => {
         <NavLink to="/kehadiran">
           <div
             onClick={() => setActiveMenu("Kehadiran")}
-            className={`flex items-center px-6 py-3 mx-4 mb-3 rounded-lg cursor-pointer ${
+            className={`flex items-center px-6 py-3 mx-4 mb-3 rounded-2xl cursor-pointer ${
               activeMenu === "Kehadiran"
                 ? "bg-white shadow-md text-gray-700"
                 : "text-gray-500"
             }`}
           >
             <div
-              className={`flex items-center justify-center w-10 h-10 rounded-lg ${
+              className={`flex items-center justify-center w-10 h-10 rounded-2xl ${
                 activeMenu === "Kehadiran" ? "bg-blue-500" : "bg-white"
               }`}
             >
@@ -81,14 +81,14 @@ const SideBar = () => {
         <NavLink to="/dataKaryawan">
           <div
             onClick={() => setActiveMenu("Data Karyawan")}
-            className={`flex items-center px-6 py-3 mx-4 mb-3 rounded-lg cursor-pointer ${
+            className={`flex items-center px-6 py-3 mx-4 mb-3 rounded-2xl cursor-pointer ${
               activeMenu === "Data Karyawan"
                 ? "bg-white shadow-md text-gray-700"
                 : "text-gray-500"
             }`}
           >
             <div
-              className={`flex items-center justify-center w-10 h-10 rounded-lg ${
+              className={`flex items-center justify-center w-10 h-10 rounded-2xl ${
                 activeMenu === "Data Karyawan" ? "bg-blue-500" : "bg-white"
               }`}
             >
@@ -106,14 +106,14 @@ const SideBar = () => {
         <NavLink to="/datatoko">
           <div
             onClick={() => setActiveMenu("Data Toko")}
-            className={`flex items-center px-6 py-3 mx-4 mb-3 rounded-lg cursor-pointer ${
+            className={`flex items-center px-6 py-3 mx-4 mb-3 rounded-2xl cursor-pointer ${
               activeMenu === "Data Toko"
                 ? "bg-white shadow-md text-gray-700"
                 : "text-gray-500"
             }`}
           >
             <div
-              className={`flex items-center justify-center w-10 h-10 rounded-lg ${
+              className={`flex items-center justify-center w-10 h-10 rounded-2xl ${
                 activeMenu === "Data Toko" ? "bg-blue-500" : "bg-white"
               }`}
             >
@@ -131,14 +131,14 @@ const SideBar = () => {
         <NavLink to="/login">
           <div
             onClick={() => setActiveMenu("Log Out")}
-            className={`flex items-center px-6 py-3 mx-4 rounded-lg cursor-pointer ${
+            className={`flex items-center px-6 py-3 mx-4 rounded-2xl cursor-pointer ${
               activeMenu === "Log Out"
                 ? "bg-white shadow-md text-gray-700"
                 : "text-gray-500"
             }`}
           >
             <div
-              className={`flex items-center justify-center w-10 h-10 rounded-lg ${
+              className={`flex items-center justify-center w-10 h-10 rounded-2xl ${
                 activeMenu === "Log Out" ? "bg-red-500" : "bg-white"
               }`}
             >
