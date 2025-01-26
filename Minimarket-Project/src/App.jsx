@@ -11,7 +11,7 @@ function App() {
   const isLoginPage = location.pathname === "/login" || location.pathname === "/";
 
   return(
-    <div className="flex">
+    <div className="flex bg-[#F8F9FA]">
       {!isLoginPage && <SideBar />}
       <div className="flex-1 p-8">
         <Routes>

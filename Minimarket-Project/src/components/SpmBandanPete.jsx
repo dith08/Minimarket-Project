@@ -49,11 +49,11 @@ const AttendanceTable = () => {
     <div className="">
       <Card className="p-4 max-w-4xl mx-auto mt-10 shadow-lg bg-white rounded-lg">
         <div className="flex justify-between items-center mb-4">
-          <h1 className="text-md font-bold text-[#277ffe]">SPM Daren</h1>
+        <div className="text-[#04d57d] text-sm font-bold font-['Helvetica']">SPM Bendan Pete</div>
           <div className="relative">
             <button
               onClick={toggleDropdown}
-              className="w-40 font-semibold text-sm px-4 py-2 text-[#277ffe] bg-[#277ffe]/10 rounded-lg flex justify-between items-center focus:outline-none"
+              className="w-40 font-semibold text-sm px-4 py-2 text-[#04d57d] bg-[#2eca6a]/10 rounded-lg flex justify-between items-center focus:outline-none"
             >
               {selectedOption}
               <MdKeyboardArrowDown
@@ -63,7 +63,7 @@ const AttendanceTable = () => {
               />
             </button>
             {showDropdown && (
-              <div className="absolute mt-2 bg-white border rounded-lg shadow-lg w-40 text-[#277ffe]">
+              <div className="absolute mt-2 bg-white border rounded-lg shadow-lg w-40 text-[#04d57d]">
                 {[
                   "Terbaru",
                   "Jam Masuk",
@@ -78,7 +78,7 @@ const AttendanceTable = () => {
                     onClick={() => handleOptionClick(option)}
                     className={`px-4 py-2 cursor-pointer hover:bg-gray-100 ${
                       selectedOption === option
-                        ? "bg-[#277ffe]/10 text-[#277ffe]"
+                        ? "bg-[#2eca6a]/10 text-[#04d57d]"
                         : ""
                     }`}
                   >
@@ -115,13 +115,13 @@ const AttendanceTable = () => {
                         : "bg-white"
                     } ${index === attendanceData.length - 1 ? "last:rounded-b-lg" : ""}`}
                   >
-                    <td className="px-4 py-3  max-w-[200px] text-[#a0aec0] border-b border-gray-300">
+                    <td className="px-4 py-3 max-w-[200px] text-[#a0aec0] border-b border-gray-300">
                       {data.name}
                     </td>
                     <td className="px-4 py-3 text-[#a0aec0] border-b border-gray-300">
                       {data.type}
                     </td>
-                    <td className="px-4 py-3 flex items-center border-b border-gray-300 ">
+                    <td className="px-4 py-3 flex items-center border-b border-gray-300">
                       <span
                         className={`font-semibold ${
                           isLate ? "text-[#ffac33]" : "text-[#04d57d]"
@@ -139,6 +139,7 @@ const AttendanceTable = () => {
             </tbody>
           </table>
         </div>
+
       </Card>
     </div>
   );

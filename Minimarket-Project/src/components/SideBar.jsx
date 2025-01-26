@@ -18,7 +18,7 @@ const SideBar = () => {
           alt="SPM Logo"
           className="w-14 h-10 object-contain"
         />
-        <h2 className="ml-3 text-sm font-bold text-gray-700">
+        <h2 className="ml-3 text-sm font-bold text-[#2d3748]">
           Surya Pratama Mart
         </h2>
       </div>
@@ -32,8 +32,8 @@ const SideBar = () => {
             onClick={() => setActiveMenu("Dashboard")}
             className={`flex items-center px-6 py-3 mx-4 mb-3 rounded-2xl cursor-pointer ${
               activeMenu === "Dashboard"
-                ? "bg-white shadow-md text-gray-700"
-                : "text-gray-500"
+                ? "bg-white shadow-md text-[#2d3748]"
+                : "text-[#a0aec0]"
             }`}
           >
             <div
@@ -57,8 +57,8 @@ const SideBar = () => {
             onClick={() => setActiveMenu("Kehadiran")}
             className={`flex items-center px-6 py-3 mx-4 mb-3 rounded-2xl cursor-pointer ${
               activeMenu === "Kehadiran"
-                ? "bg-white shadow-md text-gray-700"
-                : "text-gray-500"
+                ? "bg-white shadow-md text-[#2d3748]"
+                : "text-[#a0aec0]"
             }`}
           >
             <div
@@ -82,8 +82,8 @@ const SideBar = () => {
             onClick={() => setActiveMenu("Data Karyawan")}
             className={`flex items-center px-6 py-3 mx-4 mb-3 rounded-2xl cursor-pointer ${
               activeMenu === "Data Karyawan"
-                ? "bg-white shadow-md text-gray-700"
-                : "text-gray-500"
+                ? "bg-white shadow-md text-[#2d3748]"
+                : "text-[#a0aec0]"
             }`}
           >
             <div
@@ -107,8 +107,8 @@ const SideBar = () => {
             onClick={() => setActiveMenu("Data Toko")}
             className={`flex items-center px-6 py-3 mx-4 mb-3 rounded-2xl cursor-pointer ${
               activeMenu === "Data Toko"
-                ? "bg-white shadow-md text-gray-700"
-                : "text-gray-500"
+                ? "bg-white shadow-md text-[#2d3748]"
+                : "text-[#a0aec0]"
             }`}
           >
             <div
@@ -130,10 +130,8 @@ const SideBar = () => {
         <NavLink to="/login">
           <div
             onClick={() => setActiveMenu("Log Out")}
-            className={`flex items-center px-6 py-3 mx-4 rounded-2xl cursor-pointer ${
+            className={`flex items-center px-6 py-3 mx-4 rounded-2xl cursor-pointer  ${
               activeMenu === "Log Out"
-                ? "bg-white shadow-md text-gray-700"
-                : "text-gray-500"
             }`}
           >
             <div
@@ -147,7 +145,7 @@ const SideBar = () => {
                 }`}
               />
             </div>
-            <span className="ml-4 font-medium text-sm text-red-500">
+            <span className="ml-4 font-semibold text-sm text-red-500">
               Log Out
             </span>
           </div>
