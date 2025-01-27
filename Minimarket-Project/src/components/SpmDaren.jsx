@@ -89,7 +89,7 @@ const AttendanceTable = () => {
             )}
           </div>
         </div>
-        <div className="rounded-lg border border-gray-300">
+        <div className="rounded-lg border border-[#eceef2]">
           <table className="w-full">
             <thead>
               <tr className="text-[#2d3748]">

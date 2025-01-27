@@ -10,7 +10,7 @@ const SideBar = () => {
   const [activeMenu, setActiveMenu] = useState("Dashboard");
 
   return (
-    <div className="w-64 min-w-64 h-screen bg-gray-50 shadow-md">
+    <div className="h-screen">
       {/* Logo dan Judul */}
       <div className="flex items-center mt-8 px-6">
         <img
