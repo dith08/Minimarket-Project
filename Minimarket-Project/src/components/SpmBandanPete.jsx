@@ -46,8 +46,8 @@ const AttendanceTable = () => {
   }
 
   return (
-    <div className="">
-      <Card className="p-4 max-w-4xl mx-auto mt-10 shadow-lg bg-white rounded-lg">
+    <div className="w-full">
+      <Card className="p-4 mx-auto mt-10 shadow-lg bg-white rounded-lg">
         <div className="flex justify-between items-center mb-4">
         <div className="text-[#04d57d] text-sm font-bold font-['Helvetica']">SPM Bendan Pete</div>
           <div className="relative">
