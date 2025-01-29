@@ -30,7 +30,7 @@ const SideBar = () => {
         <NavLink to="/dashboard">
           <div
             onClick={() => setActiveMenu("Dashboard")}
-            className={`flex items-center px-6 py-3 mx-4 mb-3 rounded-2xl cursor-pointer ${
+            className={`flex items-center px-6 py-3 mx-4 mb-3 rounded-2xl cursor-pointer hover:bg-white hover:text-gray-700 hover:shadow-md transition-all duration-30 ${
               activeMenu === "Dashboard"
                 ? "bg-white shadow-md text-[#2d3748]"
                 : "text-[#a0aec0]"
@@ -55,7 +55,7 @@ const SideBar = () => {
         <NavLink to="/kehadiran">
           <div
             onClick={() => setActiveMenu("Kehadiran")}
-            className={`flex items-center px-6 py-3 mx-4 mb-3 rounded-2xl cursor-pointer ${
+            className={`flex items-center px-6 py-3 mx-4 mb-3 rounded-2xl cursor-pointer hover:bg-white hover:text-gray-700 hover:shadow-md transition-all duration-30 ${
               activeMenu === "Kehadiran"
                 ? "bg-white shadow-md text-[#2d3748]"
                 : "text-[#a0aec0]"
@@ -80,7 +80,7 @@ const SideBar = () => {
         <NavLink to="/dataKaryawan">
           <div
             onClick={() => setActiveMenu("Data Karyawan")}
-            className={`flex items-center px-6 py-3 mx-4 mb-3 rounded-2xl cursor-pointer ${
+            className={`flex items-center px-6 py-3 mx-4 mb-3 rounded-2xl cursor-pointer hover:bg-white hover:text-gray-700 hover:shadow-md transition-all duration-30 ${
               activeMenu === "Data Karyawan"
                 ? "bg-white shadow-md text-[#2d3748]"
                 : "text-[#a0aec0]"
@@ -105,7 +105,7 @@ const SideBar = () => {
         <NavLink to="/datatoko">
           <div
             onClick={() => setActiveMenu("Data Toko")}
-            className={`flex items-center px-6 py-3 mx-4 mb-3 rounded-2xl cursor-pointer ${
+            className={`flex items-center px-6 py-3 mx-4 mb-3 rounded-2xl cursor-pointer hover:bg-white hover:text-gray-700 hover:shadow-md transition-all duration-30 ${
               activeMenu === "Data Toko"
                 ? "bg-white shadow-md text-[#2d3748]"
                 : "text-[#a0aec0]"
@@ -130,7 +130,7 @@ const SideBar = () => {
         <NavLink to="/login">
           <div
             onClick={() => setActiveMenu("Log Out")}
-            className={`flex items-center px-6 py-3 mx-4 rounded-2xl cursor-pointer  ${
+            className={`flex items-center px-6 py-3 mx-4 rounded-2xl cursor-pointer hover:bg-white hover:text-gray-700 hover:shadow-md transition-all duration-30 ${
               activeMenu === "Log Out"
             }`}
           >
