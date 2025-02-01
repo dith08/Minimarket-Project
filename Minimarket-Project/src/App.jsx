@@ -4,6 +4,8 @@ import DataKaryawan from "./pages/DataKaryawan";
 import DataToko from "./pages/DataToko";
 import Kehadiran from "./pages/Kehadiran";
 import Login from "./pages/Login"
+import TambahToko from "./pages/TambahToko";
+import DetailDataToko from "./pages/DetailDataToko";
 import { Routes, Route, useLocation } from "react-router-dom";
 
 function App() {
@@ -21,6 +23,8 @@ function App() {
           <Route path="/kehadiran" element={<Kehadiran/>} />
           <Route path="/dataKaryawan" element={<DataKaryawan/>} />
           <Route path="/dataToko" element={<DataToko/>} />
+          <Route path="/detailDataToko" element={<DetailDataToko/>} />
+          <Route path="/tambahToko" element={<TambahToko/>} />
         </Routes>
       </div>        
     </div>
