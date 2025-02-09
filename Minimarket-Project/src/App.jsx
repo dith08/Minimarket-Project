@@ -7,6 +7,8 @@ import Login from "./pages/Login"
 import TambahToko from "./pages/TambahToko";
 import DetailDataToko from "./pages/DetailDataToko";
 import { Routes, Route, useLocation } from "react-router-dom";
+import FormDetailDataKaryawan from "./components/FormDetailDataKaryawan";
+import FormTambahKaryawan from "./components/FromTambahKaryawan";
 
 function App() {
   const location = useLocation();
@@ -25,6 +27,8 @@ function App() {
           <Route path="/dataToko" element={<DataToko/>} />
           <Route path="/detailDataToko" element={<DetailDataToko/>} />
           <Route path="/tambahToko" element={<TambahToko/>} />
+          <Route path="/detailKaryawan/:id" element={<FormDetailDataKaryawan/>} />
+          <Route path="/tambahKaryawan" element={<FormTambahKaryawan/>} />
         </Routes>
       </div>        
     </div>
