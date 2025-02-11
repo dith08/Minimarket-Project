@@ -1,8 +1,9 @@
+import TableKehadiran from "../components/TableKehadiran"
 
 const Kehadiran = () => {
   return (
     <div>
-        <h1>Kehadiran</h1>
+        <TableKehadiran/>
     </div>
   )
 }
