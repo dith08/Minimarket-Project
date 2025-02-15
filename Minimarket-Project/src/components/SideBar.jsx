@@ -13,14 +13,8 @@ const SideBar = () => {
     <div className="h-screen">
       {/* Logo dan Judul */}
       <div className="flex items-center mt-8 px-6">
-        <img
-          src={logo}
-          alt="SPM Logo"
-          className="w-14 h-10 object-contain"
-        />
-        <h2 className="ml-3 text-sm font-bold text-[#2d3748]">
-          Surya Pratama Mart
-        </h2>
+        <img src={logo} alt="SPM Logo" className="w-14 h-10 object-contain" />
+        <h2 className="ml-3 text-sm font-bold text-[#2d3748]">Surya Pratama Mart</h2>
       </div>
       <hr className="w-10/12 mx-auto my-4 border-t border-gray-300" />
 
@@ -31,21 +25,11 @@ const SideBar = () => {
           <div
             onClick={() => setActiveMenu("Dashboard")}
             className={`flex items-center px-6 py-3 mx-4 mb-3 rounded-2xl cursor-pointer hover:bg-white hover:text-gray-700 hover:shadow-md transition-all duration-30 ${
-              activeMenu === "Dashboard"
-                ? "bg-white shadow-md text-[#2d3748]"
-                : "text-[#a0aec0]"
+              activeMenu === "Dashboard" ? "bg-white shadow-md text-[#2d3748]" : "text-[#a0aec0]"
             }`}
           >
-            <div
-              className={`flex items-center justify-center w-10 h-10 rounded-2xl ${
-                activeMenu === "Dashboard" ? "bg-blue-500" : "bg-white"
-              }`}
-            >
-              <FaHome
-                className={`w-5 h-5 ${
-                  activeMenu === "Dashboard" ? "text-white" : "text-blue-500"
-                }`}
-              />
+            <div className={`flex items-center justify-center w-10 h-10 rounded-2xl ${activeMenu === "Dashboard" ? "bg-blue-500" : "bg-white"}`}>
+              <FaHome className={`w-5 h-5 ${activeMenu === "Dashboard" ? "text-white" : "text-blue-500"}`} />
             </div>
             <span className="ml-4 font-medium text-sm">Dashboard</span>
           </div>
@@ -56,21 +40,11 @@ const SideBar = () => {
           <div
             onClick={() => setActiveMenu("Kehadiran")}
             className={`flex items-center px-6 py-3 mx-4 mb-3 rounded-2xl cursor-pointer hover:bg-white hover:text-gray-700 hover:shadow-md transition-all duration-30 ${
-              activeMenu === "Kehadiran"
-                ? "bg-white shadow-md text-[#2d3748]"
-                : "text-[#a0aec0]"
+              activeMenu === "Kehadiran" ? "bg-white shadow-md text-[#2d3748]" : "text-[#a0aec0]"
             }`}
           >
-            <div
-              className={`flex items-center justify-center w-10 h-10 rounded-2xl ${
-                activeMenu === "Kehadiran" ? "bg-blue-500" : "bg-white"
-              }`}
-            >
-              <LiaUserCheckSolid
-                className={`w-5 h-5 ${
-                  activeMenu === "Kehadiran" ? "text-white" : "text-blue-500"
-                }`}
-              />
+            <div className={`flex items-center justify-center w-10 h-10 rounded-2xl ${activeMenu === "Kehadiran" ? "bg-blue-500" : "bg-white"}`}>
+              <LiaUserCheckSolid className={`w-5 h-5 ${activeMenu === "Kehadiran" ? "text-white" : "text-blue-500"}`} />
             </div>
             <span className="ml-4 font-medium text-sm">Kehadiran</span>
           </div>
@@ -81,21 +55,11 @@ const SideBar = () => {
           <div
             onClick={() => setActiveMenu("Data Karyawan")}
             className={`flex items-center px-6 py-3 mx-4 mb-3 rounded-2xl cursor-pointer hover:bg-white hover:text-gray-700 hover:shadow-md transition-all duration-30 ${
-              activeMenu === "Data Karyawan"
-                ? "bg-white shadow-md text-[#2d3748]"
-                : "text-[#a0aec0]"
+              activeMenu === "Data Karyawan" ? "bg-white shadow-md text-[#2d3748]" : "text-[#a0aec0]"
             }`}
           >
-            <div
-              className={`flex items-center justify-center w-10 h-10 rounded-2xl ${
-                activeMenu === "Data Karyawan" ? "bg-blue-500" : "bg-white"
-              }`}
-            >
-              <FaUsers
-                className={`w-5 h-5 ${
-                  activeMenu === "Data Karyawan" ? "text-white" : "text-blue-500"
-                }`}
-              />
+            <div className={`flex items-center justify-center w-10 h-10 rounded-2xl ${activeMenu === "Data Karyawan" ? "bg-blue-500" : "bg-white"}`}>
+              <FaUsers className={`w-5 h-5 ${activeMenu === "Data Karyawan" ? "text-white" : "text-blue-500"}`} />
             </div>
             <span className="ml-4 font-medium text-sm">Data Karyawan</span>
           </div>
@@ -106,21 +70,11 @@ const SideBar = () => {
           <div
             onClick={() => setActiveMenu("Data Toko")}
             className={`flex items-center px-6 py-3 mx-4 mb-3 rounded-2xl cursor-pointer hover:bg-white hover:text-gray-700 hover:shadow-md transition-all duration-30 ${
-              activeMenu === "Data Toko"
-                ? "bg-white shadow-md text-[#2d3748]"
-                : "text-[#a0aec0]"
+              activeMenu === "Data Toko" ? "bg-white shadow-md text-[#2d3748]" : "text-[#a0aec0]"
             }`}
           >
-            <div
-              className={`flex items-center justify-center w-10 h-10 rounded-2xl ${
-                activeMenu === "Data Toko" ? "bg-blue-500" : "bg-white"
-              }`}
-            >
-              <IoStorefront
-                className={`w-5 h-5 ${
-                  activeMenu === "Data Toko" ? "text-white" : "text-blue-500"
-                }`}
-              />
+            <div className={`flex items-center justify-center w-10 h-10 rounded-2xl ${activeMenu === "Data Toko" ? "bg-blue-500" : "bg-white"}`}>
+              <IoStorefront className={`w-5 h-5 ${activeMenu === "Data Toko" ? "text-white" : "text-blue-500"}`} />
             </div>
             <span className="ml-4 font-medium text-sm">Data Toko</span>
           </div>
@@ -128,26 +82,11 @@ const SideBar = () => {
 
         {/* Log Out */}
         <NavLink to="/login">
-          <div
-            onClick={() => setActiveMenu("Log Out")}
-            className={`flex items-center px-6 py-3 mx-4 rounded-2xl cursor-pointer hover:bg-white hover:text-gray-700 hover:shadow-md transition-all duration-30 ${
-              activeMenu === "Log Out"
-            }`}
-          >
-            <div
-              className={`flex items-center justify-center w-10 h-10 rounded-2xl ${
-                activeMenu === "Log Out" ? "bg-red-500" : "bg-white"
-              }`}
-            >
-              <RiBook3Fill
-                className={`w-5 h-5 ${
-                  activeMenu === "Log Out" ? "text-white" : "text-red-500"
-                }`}
-              />
+          <div onClick={() => setActiveMenu("Log Out")} className={`flex items-center px-6 py-3 mx-4 rounded-2xl cursor-pointer hover:bg-white hover:text-gray-700 hover:shadow-md transition-all duration-30 ${activeMenu === "Log Out"}`}>
+            <div className={`flex items-center justify-center w-10 h-10 rounded-2xl ${activeMenu === "Log Out" ? "bg-red-500" : "bg-white"}`}>
+              <RiBook3Fill className={`w-5 h-5 ${activeMenu === "Log Out" ? "text-white" : "text-red-500"}`} />
             </div>
-            <span className="ml-4 font-semibold text-sm text-red-500">
-              Log Out
-            </span>
+            <span className="ml-4 font-semibold text-sm text-red-500">Log Out</span>
           </div>
         </NavLink>
       </div>

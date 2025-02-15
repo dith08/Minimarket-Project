@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { Dropdown } from "./ui/dropdown";
+import Fitur from "./ui/items2";
 
 const TableKehadiran = () => {
   const [attendanceData, setAttendanceData] = useState([]);
@@ -8,9 +10,7 @@ const TableKehadiran = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(
-          "https://jsonplaceholder.typicode.com/users"
-        );
+        const response = await axios.get("https://jsonplaceholder.typicode.com/users");
         const totalUsers = response.data.length;
         const lateCount = Math.floor(totalUsers * 0.2);
         const lateIndexes = new Set();
@@ -65,10 +65,17 @@ const TableKehadiran = () => {
     };
     fetchData();
   }, []);
+  const dropmenu = ["Semua Market", "SPM Daren", "SPM Bendan Pete"];
+  const [selectMenu, SetSelectMenu] = useState(dropmenu[0]);
+    const [searchTerm, setSearchTerm] = useState("");
 
   return (
     <div className="w-full">
-      <div className="p-8 mx-auto mt-10 shadow-lg bg-white rounded-lg">
+      <div className="p-8 mx-auto mt-10 shadow-lg bg-white rounded-lg flex flex-col gap-3">
+        <div className="flex gap-4 mb-4 text-sm items-center justify-between outline-none border-transparent">
+          <Dropdown options={dropmenu} selected={selectMenu} onSelect={SetSelectMenu}/>
+          <Fitur value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} placeholder="Cari karyawan..."/>
+        </div>
         <div className="overflow-x-auto border rounded-lg overflow-hidden">
           <table className="min-w-full table-auto">
             <thead>
@@ -87,24 +94,18 @@ const TableKehadiran = () => {
             <tbody className="text-sm">
               {loading ? (
                 <tr>
-                  <td colSpan="9" className="text-center py-4">Loading...</td>
+                  <td colSpan="9" className="text-center py-4">
+                    Loading...
+                  </td>
                 </tr>
               ) : (
                 attendanceData.map((user, index) => (
-                  <tr
-                    key={user.no}
-                    className={`${index % 2 === 0 ? "bg-[#ebf0fe]" : "bg-white"}`}
-                  >
+                  <tr key={user.no} className={`${index % 2 === 0 ? "bg-[#ebf0fe]" : "bg-white"}`}>
                     <td className="px-4 py-3 text-[#a0aec0] border-b border-gray-300">{user.no}.</td>
                     <td className="px-4 py-3 text-[#a0aec0] border-b border-gray-300">{user.name}</td>
                     <td className="px-4 py-3 text-[#a0aec0] border-b border-gray-300">{user.date}</td>
                     {user.attendance.map((item, idx) => (
-                      <td
-                        key={idx}
-                        className={`px-4 py-3  border-b border-gray-300 text-[12px] ${
-                          typeof item === "string" ? "text-[#e53e3e]" : item.delay ? "text-[#ffac33]" : "text-[#04d57d]"
-                        }`}
-                      >
+                      <td key={idx} className={`px-4 py-3  border-b border-gray-300 text-[12px] ${typeof item === "string" ? "text-[#e53e3e]" : item.delay ? "text-[#ffac33]" : "text-[#04d57d]"}`}>
                         {typeof item === "string" ? item : `${item.time} ${item.delay ? `(${item.delay})` : ""}`}
                       </td>
                     ))}
