@@ -10,16 +10,26 @@ const listBulan = ["January", "February", "March", "April", "May", "June", "July
 
 const Chart = () => {
   const [chartData, setChartData] = useState(null);
-  const [bulanIndex, setBulanIndex  ] = useState(0);
+  const [bulanIndex, setBulanIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get("https://jsonplaceholder.typicode.com/posts");
-        const data = response.data.slice(0, 31);
+        let data = response.data.slice(0, 31);
+        
+        if (isMobile) {
+          data = data.slice(0, 8);
+        }
 
         const labels = data.map((post) => post.id);
-
         const values = data.map((post) => post.title.length);
         const bodyLength = data.map((post) => post.body.length);
 
@@ -56,7 +66,7 @@ const Chart = () => {
     };
 
     fetchData();
-  }, []);
+  }, [isMobile]);
 
   const options = {
     responsive: true,
@@ -92,22 +102,24 @@ const Chart = () => {
   };
 
   return (
-    <div className="w-full bg-white p-6 rounded-2xl shadow-md">
+    <div className="bg-white p-6 rounded-2xl shadow-md w-[23rem] md:w-full">
       <div className="flex items-center mb-4 justify-between">
         <h2 className="text-blue-600 font-semibold text-lg flex items-center">
-          Kehadiran  <span className="text-slate-300 text-sm ml-1">/Bulan</span>
+          Kehadiran <span className="text-slate-300 text-sm ml-1">/Bulan</span>
         </h2>
         <div className="flex items-center justify-center">
           <button onClick={Previous} className="px-3 py-1 text-xl">
-          <SlArrowLeft size={20} />
+            <SlArrowLeft size={20} />
           </button>
           <h2 className="text-blue-600 font-semibold text-lg">{listBulan[bulanIndex]}</h2>
           <button onClick={Next} className="px-3 py-1 text-xl">
-          <SlArrowRight size={20} />
+            <SlArrowRight size={20} />
           </button>
         </div>
       </div>
-      <div className="h-[300px] w-full">{chartData ? <Line data={chartData} options={options} /> : <p>Loading chart...</p>}</div>
+      <div className="h-[300px] w-full">
+        {chartData ? <Line data={chartData} options={options} /> : <p>Loading chart...</p>}
+      </div>
     </div>
   );
 };

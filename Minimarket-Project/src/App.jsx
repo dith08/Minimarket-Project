@@ -16,7 +16,7 @@ function App() {
 
   return(
     <div className="flex bg-[#F8F9FA]">
-      {!isLoginPage && <SideBar />}
+      {!isLoginPage && <div className="hidden md:flex"><SideBar/></div> }
       <div className="flex-1 p-8">
         <Routes>
           <Route path="/" element={<Login/>} />
